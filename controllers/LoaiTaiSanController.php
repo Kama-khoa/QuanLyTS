@@ -82,5 +82,20 @@ class LoaiTaiSanController extends Controller {
             $_SESSION['message_type'] = 'danger';
         }
     }
+    public function deletebyid($id) {
+        if ($this->taiSan->updateLoaiTaiSanIdToZero($id)) {
+            if ($this->loaiTaiSan->delete($id)) {
+                $_SESSION['message'] = 'Xóa loại tài sản thành công!';
+                $_SESSION['message_type'] = 'success';
+                header("Location: index.php?model=loaitaisan");
+            } else {
+                $_SESSION['message'] = 'Xóa thất bại!';
+                $_SESSION['message_type'] = 'danger';
+            }
+        } else {
+            $_SESSION['message'] = 'Cập nhật tài sản thất bại!';
+            $_SESSION['message_type'] = 'danger';
+        }
+    }
 }
 ?>
