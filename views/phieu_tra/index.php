@@ -127,7 +127,7 @@
                                     <td class="d-flex justify-content-center">
                                         <a href="index.php?model=phieutra&action=show&id=<?php echo $phieu['phieu_tra_id']; ?>" class="btn btn-info btn-sm mx-2">Xem</a>
                                         <?php if ($_SESSION['role'] == 'NhanVien' && $phieu['trang_thai'] == 'DaGui'): ?>
-                                            <a href="index.php?model=phieutra&action=edit&id=<?php echo $phieu['phieu_tra_id']; ?>" class="btn btn-warning btn-sm mx-2">Sửa</a>
+                                            <a href="index.php?model=phieutra&action=edit&id=<?php echo $phieu['phieu_tra_id']; ?>" onclick="return confirmUpdate();" class="btn btn-warning btn-sm mx-2">Sửa</a>
                                         <?php endif; ?>
                                         <?php if ($_SESSION['role'] == 'NhanVien' && $phieu['trang_thai'] == 'DaGui'): ?>
                                                 <a href="index.php?model=phieutra&action=delete&id=<?= $phieu['phieu_tra_id']; ?>" onclick="return confirmDelete();"
@@ -208,5 +208,9 @@
 
     function confirmDelete() {
         return confirm('Bạn có chắc muốn xóa phiếu này?');
+    }
+
+    function confirmDelete() {
+        return confirm('Bạn có chắc muốn suwar phiếu này?');
     }
 </script>

@@ -215,6 +215,17 @@ $(document).ready(function () {
             window.location.href = url;
         }
     });
+    
+    // $('body').on('click', 'a[onclick="return confirmUpdate();"]', function(e) {
+    //     e.preventDefault();
+    //     var url = $(this).attr('href');
+    //     if (confirm('Bạn có chắc chắn muốn suwar phiếu nhập này không?')) {
+    //         window.location.href = url;
+    //     }
+    // });
+    function confirmUpdate() {
+        return confirm('Bạn có chắc muốn suwar phiếu này?');
+    }
 });
 
 // Function to reset search form
@@ -223,4 +234,5 @@ function resetSearchForm() {
     $('#trangThai').val('');
     $('#dataTable').DataTable().draw();
 }
+
 </script>

@@ -252,5 +252,7 @@ $(document).ready(function () {
         $('#trangThai').val('');
         table.draw();
     });
+
+    
 });
 </script>

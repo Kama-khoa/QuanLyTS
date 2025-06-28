@@ -71,32 +71,32 @@ INSERT INTO tai_san (ten_tai_san, mo_ta,  loai_tai_san_id) VALUES
 ('Bộ giường tủ cho ký túc xá', 'Dành cho sinh viên nội trú', 3);
 
 -- Thêm dữ liệu vào bảng vi_tri
-INSERT INTO vi_tri (ten_vi_tri) VALUES
-('Kho'),
-('Phòng máy tính đại cương'),
-('Phòng thông báo'),
-('Bãi đỗ xe'),
-('Phòng máy phát điện dự phòng'),
-('Giảng đường lớn'),
-('Phòng học'),
-('Phòng thí nghiệm hóa học'),
-('Văn phòng khoa học'),
-('Phòng thí nghiệm điện tử'),
-('Khuôn viên trường'),
-('Phòng thể dục thể thao'),
-('Phòng họp'),
-('Khu ký túc xá'),
-('Phòng thí nghiệm sinh học'),
-('Phòng thí nghiệm chính xác'),
-('Khu vực hành lang'),
-('Phòng chờ'),
-('Khu vực tổ chức hội thảo'),
-('Khu vực Internet'),
-('Phòng sản xuất'),
-('Phòng kiểm tra an toàn điện'),
-('Khu vực làm việc nóng'),
-('Phòng in ấn'),
-('Phòng thí nghiệm lượng tử');
+    INSERT INTO vi_tri (ten_vi_tri) VALUES
+    ('Kho', 'HTTT'),
+    ('Phòng máy tính đại cương', 'CNTT'),
+    ('Phòng thông báo', 'KT'),
+    ('Bãi đỗ xe', 'Co khi'),
+    ('Phòng máy phát điện dự phòng', 'Cong trinh'),
+    ('Giảng đường lớn', 'Moi truong-ATGT'),
+    ('Phòng học', 'HTTT'),
+    ('Phòng thí nghiệm hóa học', 'CNTT'),
+    ('Văn phòng khoa học', 'KT'),
+    ('Phòng thí nghiệm điện tử', 'Co khi'),
+    ('Khuôn viên trường', 'Cong trinh'),
+    ('Phòng thể dục thể thao', 'Moi truong-ATGT'),
+    ('Phòng họp', 'HTTT'),
+    ('Khu ký túc xá', 'CNTT'),
+    ('Phòng thí nghiệm sinh học', 'KT'),
+    ('Phòng thí nghiệm chính xác', 'Co khi'),
+    ('Khu vực hành lang', 'Cong trinh'),
+    ('Phòng chờ', 'Moi truong-ATGT'),
+    ('Khu vực tổ chức hội thảo', 'HTTT'),
+    ('Khu vực Internet', 'CNTT'),
+    ('Phòng sản xuất', 'KT'),
+    ('Phòng kiểm tra an toàn điện', 'Co khi'),
+    ('Khu vực làm việc nóng', 'Cong trinh'),
+    ('Phòng in ấn', 'Moi truong-ATGT'),
+    ('Phòng thí nghiệm lượng tử', 'HTTT');
 
 -- -- Thêm dữ liệu vào bảng nha_cung_cap
 -- INSERT INTO nha_cung_cap (ten_nha_cung_cap,trang_thai) VALUES

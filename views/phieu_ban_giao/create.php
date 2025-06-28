@@ -31,7 +31,7 @@
                         alert.style.display = 'none';
                     }, 150);
                 }
-            }, 7000);
+            }, 2000);
         </script>
     <?php endif; ?>
     <div class="card shadow mb-4">
