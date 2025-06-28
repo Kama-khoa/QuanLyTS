@@ -17,13 +17,13 @@ class PhieuTraChiTiet
     }
 
     public function readDetailById($id){
-         $query = "SELECT pt.*, ptct.*, vt.*, vtct.vi_tri_id, ts.ten_tai_san, vtct.so_luong as so_luong_trong_phong_ban
+        $query = "SELECT DISTINCT pt.*, ptct.*, vt.ten_vi_tri, vtct.vi_tri_id as PT_VTCT, ts.ten_tai_san, vtct.so_luong as so_luong_trong_phong_ban
           FROM phieu_tra pt
           INNER JOIN phieu_tra_chi_tiet ptct ON pt.phieu_tra_id = ptct.phieu_tra_id
           INNER JOIN tai_san ts ON ts.tai_san_id = ptct.tai_san_id
-          INNER JOIN vi_tri_chi_tiet vtct ON vtct.tai_san_id = ts.tai_san_id
-          INNER JOIN vi_tri vt ON vt.vi_tri_id = vtct.vi_tri_id
-          WHERE pt.phieu_tra_id = ?";
+          INNER JOIN vi_tri_chi_tiet vtct ON vtct.tai_san_id = ptct.tai_san_id
+          INNER JOIN vi_tri vt ON vt.vi_tri_id = ptct.vi_tri_id
+          WHERE pt.phieu_tra_id = ? AND ptct.vi_tri_id = vtct.vi_tri_id";
         $stmt = $this->conn->prepare($query);
         $stmt->execute([$id]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
